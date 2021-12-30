@@ -1,0 +1,19 @@
+# schema of a graphql..we have Queries and annotations
+# define schema what type it is
+schema {
+    query: Query
+}
+# expose my final Query..type of message which user need to send.. we can provide allBooks Or specific Book
+type Query {
+    allBooks: [Book]
+    book(id: String) : Book
+}
+
+# Metadata of a Book..data of a particular Book
+type Book {
+    isn: String
+    title: String
+    publisher: String
+    authors: [String]
+    publishedDate: String
+}
